@@ -1,0 +1,24 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    /* top: 27px; */
+    left: 76px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.logo img {
+    width: 94px;
+}

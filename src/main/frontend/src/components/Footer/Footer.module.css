@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-brand);
+}
+
+.description {
+    font-size: var(--font-nano);
+    font-weight: var(--weight-bold-400);
+    color: var(--color-white);
+}
+
+.description span {
+    margin: 0 18px;
+}
