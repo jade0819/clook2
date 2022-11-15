@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Main from "../../components/Main/Main";
 import styles from "./Weather.module.css";
 
