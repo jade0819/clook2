@@ -1,14 +1,16 @@
 import Header from "./components/Header/Header";
 import Weather from "./pages/weather/Weather";
 import Footer from "./components/Footer/Footer";
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Header />
-      <Weather />
-      <Footer />
+      <div className={styles.content}>
+        <Weather />
+        <Footer />
+      </div>
     </div>
   );
 }
