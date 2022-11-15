@@ -1,13 +1,19 @@
 .header {
-    position: fixed;
+    /* for safari */
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
+    height: 96px;
+    max-width: 1440px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 18px 0;
+    background-color: var(--color-white);
+    z-index: 1;
 }
 
 .logo {

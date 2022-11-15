@@ -1,12 +1,15 @@
-import React from 'react';
-import Main from '../../components/Main/Main';
-import styles from '../pages.module.css'
+import React from "react";
+import Main from "../../components/Main/Main";
+import styles from "../pages.module.css";
 
 export default function Weather() {
-    return (
-        <div className={styles.container}>
-            <Main />
-        </div>
-    );
+  return (
+    <div className={styles.container}>
+      <Main />
+      <Main />
+      <Main />
+      <Main />
+      <Main />
+    </div>
+  );
 }
-

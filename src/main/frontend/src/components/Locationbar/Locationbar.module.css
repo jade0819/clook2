@@ -1,5 +1,5 @@
 .location {
-    font-size: var(--font-small);
-    font-weight: var(--weight-bold-600);
-    color: var(--color-brand);
+	font-size: var(--font-small);
+	font-weight: var(--weight-bold-600);
+	color: var(--color-brand);
 }
