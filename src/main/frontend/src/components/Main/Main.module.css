@@ -65,8 +65,27 @@
   align-items: flex-start;
 }
 
-.right img {
+/* .character {
   margin-left: 18px;
+} */
+
+@keyframes character {
+  0% {
+    top: 0px;
+  }
+
+  to {
+    top: -20px;
+  }
+}
+
+.character {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-left: 18px;
+  /* Infinite(무한 반복) / Alternate(순방향으로 애니메이션을 시작해서 역방향으로 번갈아 애니메이션 재생) */
+  animation: character 0.7s ease-out Infinite Alternate;
 }
 
 .icon {

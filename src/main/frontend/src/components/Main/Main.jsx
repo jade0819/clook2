@@ -34,7 +34,7 @@ export default function Main() {
           </div>
         </div>
         <div className={styles.right}>
-          <img src={character} alt="" />
+          <img src={character} alt="" className={styles.character} />
         </div>
       </div>
       <Card cardStyle={cardStyle}>
