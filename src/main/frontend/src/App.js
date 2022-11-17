@@ -7,12 +7,12 @@ import Fetch from "./Fetch";
 function App() {
   return (
     <div className={styles.app}>
-      <Fetch />
-      {/* <Header />
+      {/* <Fetch /> */}
+      <Header />
       <div className={styles.content}>
         <Weather />
         <Footer />
-      </div> */}
+      </div>
     </div>
   );
 }

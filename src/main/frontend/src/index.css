@@ -1,39 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 900;
+  font-display: swap;
+  src: local('Pretendard Black'), url('./assets/fonts/Pretendard-Black.subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 800;
+  font-display: swap;
+  src: local('Pretendard ExtraBold'), url('./assets/fonts/Pretendard-ExtraBold.subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-display: swap;
+  src: local('Pretendard Bold'), url('./assets/fonts/Pretendard-Bold.subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-display: swap;
+  src: local('Pretendard SemiBold'), url('./assets/fonts/Pretendard-SemiBold.subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-display: swap;
+  src: local('Pretendard Medium'), url('./assets/fonts/Pretendard-Medium.subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-display: swap;
+  src: local('Pretendard Regular'), url('./assets/fonts/Pretendard-Regular.subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 300;
+  font-display: swap;
+  src: local('Pretendard Light'), url('./assets/fonts/Pretendard-Light.subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 200;
+  font-display: swap;
+  src: local('Pretendard ExtraLight'), url('./assets/fonts/Pretendard-ExtraLight.subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 100;
+  font-display: swap;
+  src: local('Pretendard Thin'), url('./assets/fonts/Pretendard-Thin.subset.woff2') format('woff2');
+}
 
 :root {
   /* Color */
   --color-bg: #EFF6FF;
-  --color-bg-dark: #F9FAFB;
   --color-text: #1E3A8A;
   --color-brand: #1E3A8A;
   --color-brand-sub: #DBEAFE;
-  --color-gray-50: #F9FAFB;
-  --color-gray-100: #F3F4F6;
-  --color-gray-200: #E5E7EB;
-  --color-gray-300: #D2D5DA;
-  --color-gray-400: #9CA3AF;
-  --color-gray-500: #6D7280;
-  --color-gray-600: #4B5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1F2937;
-  --color-gray-900: #111827;
-  --color-blue-50: #EFF6FF;
   --color-blue-100: #DBEAFE;
   --color-blue-200: #BFDBFE;
-  --color-blue-300: #93C5FD;
-  --color-blue-400: #60A5FA;
-  --color-blue-500: #3B82F6;
   --color-blue-600: #2563EB;
-  --color-blue-700: #1D4ED8;
-  --color-blue-800: #1E40AF;
   --color-blue-900: #1E3A8A;
   --color-white: #FFFFFF;
-  --color-light-white: #FCFDFF;
   --color-red: #DC2626;
   --color-yellow: #CA8A04;
   --color-green: #16A34A;
   --color-scrollbar: #1E3A8A;
   --color-scrollbar-bg: #DBEAFE;
+
+  /* Font family */
+  --font-pretendard: "Pretendard";
 
   /* Font size */
   --font-3xl: 96px;
@@ -47,10 +102,15 @@
   --font-nano: 16px;
 
   /* Font weight */
+  --weight-bold-900: 900;
   --weight-bold-800: 800;
   --weight-bold-700: 700;
   --weight-bold-600: 600;
+  --weight-bold-500: 500;
   --weight-bold-400: 400;
+  --weight-bold-300: 300;
+  --weight-bold-200: 200;
+
 
   /* Animation */
   --animation--duration: 300ms;
@@ -58,10 +118,8 @@
 
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: var(--font-pretendard), sans-serif; */
+  font-family: var(--font-pretendard);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
@@ -125,11 +183,11 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color-brand-sub);
+  background-color: var(--color-scrollbar-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-brand);
+  background-color: var(--color-scrollbar);
   border-radius: 24px;
 }
 

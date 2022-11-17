@@ -1,9 +1,14 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-export default function Card({ cardStyle, children }) {
+export default function Card({ selected, cardStyle, children }) {
   return (
-    <div className={styles.card} style={cardStyle}>
+    <div
+      className={`${
+        selected ? [styles.card, styles.selected].join(" ") : styles.card
+      }`}
+      style={cardStyle}
+    >
       {children}
     </div>
   );

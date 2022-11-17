@@ -25,17 +25,15 @@ export default function Locationbar() {
   };
 
   return (
-    <div>
-      <Card cardStyle={cardStyle}>
-        <Icon icon={faLocationDot} size={18} />
-        {/* <div className={styles.location}>서울특별시 강남구 신사동</div> */}
-        <ul className={styles.location}>
+    <Card selected={true} cardStyle={cardStyle}>
+      <Icon icon={faLocationDot} size={18} color={"var(--color-white)"} />
+      <div className={styles.location}>서울특별시 강남구 신사동</div>
+      {/* <ul className={styles.location}>
           {data.map((item, index) => (
             <li key={item.id}>{item.name}</li>
           ))}
-        </ul>
-        <Icon icon={faAngleDown} size={18} />
-      </Card>
-    </div>
+        </ul> */}
+      <Icon icon={faAngleDown} size={18} color={"var(--color-white)"} />
+    </Card>
   );
 }
