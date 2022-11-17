@@ -1,11 +1,7 @@
-.container {
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-.contents {
-  width: 100%;
-  overflow: auto;
+  max-width: 992px;
 }

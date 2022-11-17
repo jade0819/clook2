@@ -4,7 +4,7 @@ import Card from "../shared/Card/Card";
 import Icon from "../shared/Icon/Icon";
 import iconWeather from "../../assets/imgs/weather.png";
 import character from "../../assets/imgs/character.png";
-import styles from "./Main.module.css";
+import styles from "./MainWeather.module.css";
 
 export default function Main() {
   const cardStyle = {
@@ -13,7 +13,7 @@ export default function Main() {
   };
 
   return (
-    <section className={styles.main}>
+    <section className={styles.section}>
       <div className={styles.card}>
         <div className={styles.left}>
           <div className={styles.today}>
