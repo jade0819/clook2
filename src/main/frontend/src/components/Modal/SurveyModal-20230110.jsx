@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Modal from "../Shared/Modal/Modal";
 import ScoreCard from "../Shared/Survey/ScoreCard";
+import useSurvey from "../../hooks/useSurvey";
 import OpinionCard from "../Shared/Survey/OpinionCard";
 import MsgCard from "../Shared/Survey/MsgCard";
 
@@ -9,18 +10,28 @@ export default function SurveyModal({
   custom,
   position,
   styles,
-  addSurvey,
 }) {
   const [data, setData] = useState({ num: -1, comment: "" });
   const [scoreCardShow, setScoreCardShow] = useState(true);
   const [opinionCardShow, setOpinionCardShow] = useState(false);
   const [msgCardShow, setMsgCardShow] = useState(false);
 
-  const handleSubmit = () => {
-    setOpinionCardShow(false);
-    setMsgCardShow(true);
+  const { mutate: addSurvey } = useSurvey();
 
-    addSurvey(data);
+  const handleSubmit = () => {
+    addSurvey(data, {
+      onSuccess: () => {
+        setOpinionCardShow(false);
+        setMsgCardShow(true);
+      },
+      onError: (e) => {
+        console.log(
+          `Suvey Error: ${e.response.status} / params: { num: ${data.num}, comment: ${data.comment} }`
+        );
+        setOpinionCardShow(false);
+        setMsgCardShow(true);
+      },
+    });
   };
 
   useEffect(() => {
@@ -37,6 +48,7 @@ export default function SurveyModal({
       {scoreCardShow && (
         <ScoreCard
           onCloseModal={onCloseModal}
+          data={data}
           setData={setData}
           setScoreCardShow={setScoreCardShow}
           setOpinionCardShow={setOpinionCardShow}

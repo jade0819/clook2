@@ -4,7 +4,6 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function SurveyCard({ title, onClose, children }) {
   return (
-    // <div className="flex flex-col justify-start w-full p-[1.875rem] bg-white rounded-default global-shadow">
     <div
       className={`flex flex-col justify-start w-full p-[1.875rem] bg-white rounded-default global-shadow`}
     >

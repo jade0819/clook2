@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 
-export default function Search({ setKeyword, helpMsgVisible }) {
+export default function Search({ setKeyword, helpVisible }) {
   const [input, setInput] = useState("");
   const [inputCheck, setInputCheck] = useState(false);
   const [addrCheck, setAddrCheck] = useState(false);
@@ -77,7 +77,7 @@ export default function Search({ setKeyword, helpMsgVisible }) {
           검색
         </button>
       </div>
-      {(!helpMsgVisible || (helpMsgVisible && addrCheck)) && (
+      {(!helpVisible || (helpVisible && addrCheck)) && (
         <div className="flex flex-col w-full text-xl leading-[140%] font-medium mt-3 text-blue-600">
           {!inputCheck && (
             <>

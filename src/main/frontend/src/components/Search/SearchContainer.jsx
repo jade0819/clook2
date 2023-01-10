@@ -15,7 +15,7 @@ export default function SearchContainer({ onCloseModal }) {
 
   return (
     <>
-      <Search setKeyword={setKeyword} helpVisible={keyword ? true : false} />
+      <Search setKeyword={setKeyword} helpMsgVisible={keyword ? true : false} />
       {keyword && dataList && (
         <SearchList onCloseModal={onCloseModal} dataList={dataList} />
       )}

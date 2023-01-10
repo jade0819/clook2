@@ -15,8 +15,8 @@ export default function Main() {
   const toptm = queryResults[0]?.data;
   const topspt = queryResults[1]?.data;
 
-  const isLoading = queryResults?.some((query) => query.isLoading);
-  const isSuccess = queryResults?.every((query) => query.status === "success");
+  const isLoading = queryResults?.some((query) => query?.isLoading);
+  const isSuccess = queryResults?.every((query) => query?.status === "success");
 
   // const toptm = fakeToptm;
   // const topspt = fakeTopspt;
