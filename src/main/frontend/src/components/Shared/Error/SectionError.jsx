@@ -5,6 +5,8 @@ import Button from "../Button/Button";
 import Section from "../Section/Section";
 
 export default function ApiError({ error, resetErrorBoundary }) {
+  console.log("===> Section Error");
+
   const status = error?.response?.data?.status;
   const errorMsg = error?.response?.data?.error;
   const type = error?.config?.url;

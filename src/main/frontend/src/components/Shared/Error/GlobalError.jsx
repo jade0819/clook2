@@ -5,6 +5,8 @@ import Button from "../Button/Button";
 import { useLocationContext } from "../../../contexts/LocationContext";
 
 export default function GlobalError({ error, resetErrorBoundary }) {
+  console.log("===> Global Error");
+
   const status = error?.response?.data?.status;
   const errorMsg = error?.response?.data?.error;
 
@@ -58,8 +60,8 @@ export default function GlobalError({ error, resetErrorBoundary }) {
           Error!
         </span>
         <span className="text-xl font-medium leading-6 mb-10 text-center">
-          {errorMsg}
-          <br />
+          {/* {errorMsg}
+          <br /> */}
           {message}
         </span>
         {buttonText && (

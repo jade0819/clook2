@@ -10,7 +10,7 @@ import TodaysWeatherSkeleton from "../UI/TodaysWeatherSkeleton";
 import TodaysCardSkeleton from "../UI/TodaysCardSkeleton";
 import { useQueryErrorResetBoundary } from "@tanstack/react-query";
 import { ErrorBoundary } from "react-error-boundary";
-import ApiError from "../Error/ApiError";
+import SectionError from "../Error/SectionError";
 
 export default function Content() {
   const { locationQuery } = useLocation();
@@ -30,16 +30,16 @@ export default function Content() {
       )}
       {!isLoading && (
         <>
-          <ErrorBoundary onReset={reset} FallbackComponent={ApiError}>
+          <ErrorBoundary onReset={reset} FallbackComponent={SectionError}>
             <Main />
           </ErrorBoundary>
-          <ErrorBoundary onReset={reset} FallbackComponent={ApiError}>
+          <ErrorBoundary onReset={reset} FallbackComponent={SectionError}>
             <ClothesByTime />
           </ErrorBoundary>
-          <ErrorBoundary onReset={reset} FallbackComponent={ApiError}>
+          <ErrorBoundary onReset={reset} FallbackComponent={SectionError}>
             <TodaysWeather />
           </ErrorBoundary>
-          <ErrorBoundary onReset={reset} FallbackComponent={ApiError}>
+          <ErrorBoundary onReset={reset} FallbackComponent={SectionError}>
             <TodaysCard />
           </ErrorBoundary>
         </>
