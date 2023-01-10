@@ -9,7 +9,7 @@ import Survey from "./components/Shared/Survey/Survey";
 export default function App() {
   return (
     <ErrorBoundary FallbackComponent={GlobalError}>
-      <div className="relative flex flex-col items-center w-full min-h-full bg-white">
+      <div className="relative flex flex-col items-center w-full min-h-full">
         <Header />
         <Content />
         <Footer />
