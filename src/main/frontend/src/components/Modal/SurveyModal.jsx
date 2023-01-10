@@ -21,13 +21,7 @@ export default function SurveyModal({
     setOpinionCardShow(false);
     setMsgCardShow(true);
 
-    addSurvey(data, {
-      onError: (e) => {
-        console.log(
-          `SurveyModal - code: ${e.response.status} / params: { num: ${data.num}, comment: ${data.comment} }`
-        );
-      },
-    });
+    addSurvey(data);
   };
 
   useEffect(() => {
