@@ -93,14 +93,11 @@ const getAir = async () => {
 
 const addSurvey = async (params) => {
   if (params === undefined) return;
-  return (
-    httpClient
-      // .post("sheetf", JSON.stringify(params), {
-      .post("sheet", JSON.stringify({ test: "dd" }), {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-      .then((res) => res.data)
-  );
+  return httpClient
+    .post("sheet", JSON.stringify(params), {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((res) => res.data);
 };
